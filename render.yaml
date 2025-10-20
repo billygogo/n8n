@@ -5,7 +5,7 @@
 # This Blueprint uses free instance types (specified by
 # `plan`) for both the web service and the database. You
 # can upgrade to paid instance types at any time to
-# increase resources.
+# increase resources. 
 
 services:
   - type: web
