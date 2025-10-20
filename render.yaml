@@ -52,22 +52,7 @@ services:
           name: n8n-db
           property: user
 
-       # Gotenberg 서버 URL을 n8n 환경 변수로 추가
-      - key: GOTENBERG_URL
-        value: https://gotenberg-service.onrender.com
-  - type: web
-    plan: Starter
-    runtime: image
-    name: gotenberg-service
-    image:
-        # Gotenberg 공식 Docker 이미지
-        url: docker.io/gotenberg/gotenberg:8
-    envVars:
-      - key: DISABLE_GOOGLE_CHROME
-        value: "false"
-        # Gotenberg는 기본적으로 3000 포트에서 동작
-      ports:
-        - 3000
+
 
 databases:
   - name: n8n-db
