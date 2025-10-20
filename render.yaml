@@ -51,7 +51,19 @@ services:
         fromDatabase:
           name: n8n-db
           property: user
-
+  - type: web
+    plan: Starter
+    runtime: image
+    name: gotenberg-service
+    image:
+      # Gotenberg 공식 Docker 이미지
+      url: docker.io/gotenberg/gotenberg:8
+    envVars:
+      - key: DISABLE_GOOGLE_CHROME
+        value: "false"
+    # Gotenberg는 기본적으로 3000 포트에서 동작
+    ports:
+      - 3000
 
 
 databases:
