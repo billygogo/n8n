@@ -51,6 +51,10 @@ services:
         fromDatabase:
           name: n8n-db
           property: user
+
+       # Gotenberg 서버 URL을 n8n 환경 변수로 추가
+      - key: GOTENBERG_URL
+        value: https://gotenberg-service.onrender.com
   - type: web
     plan: Starter
     runtime: image
